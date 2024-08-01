@@ -1,0 +1,17 @@
+numpy
+pandas
+Pillow
+spacy
+requests
+tqdm
+wget
+medclip
+opencv-python>=4.4.0.42
+nltk>=3.7
+scikit_learn>=1.1.2
+textaugment>=1.3.4
+timm>=0.6.11
+multilingual_clip==1.0.10
+transformers>=4.23.1,<=4.24.0
+gradio==3.35.2
+git+https://github.com/openai/CLIP.git
