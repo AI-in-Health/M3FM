@@ -1,20 +1,6 @@
-Demo code using COV-CTR dataset for our M3FM. For other datasets, you need to send the official requests.
+Demo code using the COV-CTR dataset for our M3FM. For other datasets, you need to send requests or download them from their official websites to access them.
 
-# System Requirements
-## Hardware requirements
-M3FM package requires only a standard computer with enough RAM to support the operations defined by a user. For minimal performance, this will be a computer with about 2 GB of RAM. For optimal performance, we recommend a computer with the following specs:
-```
-RAM: 16+ GB
-CPU: 4+ cores, 3.3+ GHz/core
-GPU: 2+ V100
-```
-The runtimes below are generated using a computer with the recommended specs.
 
-## Software requirements
-This package is supported for Linux. The package has been tested on the following system:
-```
-Linux: Ubuntu 16.04
-```
 ## Environment
 Clone the repo
 ```
@@ -32,42 +18,6 @@ pip install pytorch>=1.10.1 torchvision>=0.11.2 torchaudio>=0.10.1 pytorch-cuda=
 pip install -r requirements.txt
 ```
 which should install in about 5 mins. We can run the code under `torch==2.2.1`. Other versions may work.
-
-## Data
-```
-The root of this repo/
-    data
-    ├── mimic_cxr
-    │   ├── annotation.json             # MIMIC_CXR dataset
-    │   ├── images
-    │   │   ├── p10               
-    │   │   ├──  .
-    │   │   ├──	 .
-    │   │	└── p19
-    ├── finetune
-    │   ├── annotation.json             # Downstream dataset
-    │   ├── images
-    │   │   ├── patient 1               
-    │   │   ├──  .
-    │   │   ├──	 .
-    pretrained
-    ├── resnet
-    │		└── pytorch_model.bin
-    │
-    decoder_config
-    │		└── decoder_config.pkl      # configuration file for model
-    │
-    checkpoint	
-    │		└── model_best.pth
-    │		└── last_checkpoint.pth
-    │
-    └── ...
-```
-The `data` folder contains the following subfolders:
-- The `mimic_cxr` folder contains MIMIC-CXR image data and corresponding annotation (eg., image id, report etc...).
-- The `finetune` folder contains the image data and corresponding annotation (eg., image id, report etc...) of the downstream dataset. 
-- The `pretrained` folder contains the initialized weights for our model which will download automatically when you run the code.
-- The `decoder_config` and `checkpoint` folders contain the configuration file of the model, and its weights, respectively.
 
   
 ## Training
